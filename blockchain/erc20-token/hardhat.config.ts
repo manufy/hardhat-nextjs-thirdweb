@@ -10,8 +10,14 @@ const config: HardhatUserConfig = {
   networks: {
     ganache: {
       url: "http://127.0.0.1:8545", //  URL y puerto coincidan de la instancia de Ganache
-      accounts: [process.env.GANACHE_ACCOUNT0_PRIVATE_KEY!] // ! para evitar un error de tipo undefined
+      accounts: [process.env.GANACHE_ACCOUNT1_PRIVATE_KEY!] // ! para evitar un error de tipo undefined
     }
+  },
+  paths: {
+    sources: "./contracts",
+    tests: "./test",
+    cache: "./cache",
+    artifacts: "./artifacts",
   },
 };
 
