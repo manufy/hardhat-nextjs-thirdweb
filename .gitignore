@@ -202,6 +202,6 @@ node_modules
 ignition/deployments/chain-31337
 ignition/deployments/*
 blockchain/erc20-token/ignition/deployments/*
-blockchain/erc20-token/ignition/modules/*
+blockchain/erc20-token/ignition/modules/Lock.ts
 
 
