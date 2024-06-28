@@ -2,13 +2,14 @@
   "scripts": {
     "compile": "bun hardhat compile",
     "test": "REPORT_GAS=true bun hardhat test",
-    "deploy-hardhat": "hardhat --show-stack-traces ignition deploy ./ignition/modules/*.ts",
-    "deploy-ganache": "./deploy_modules.sh",
-    "run-hardhat": "bun hardhat node",
+    "deploy-hardhat": "./deploy_modules.sh hardhat_local",
+    "deploy-ganache": "./deploy_modules.sh ganache_local",
+    "run-hardhat": "DEBUG=* npx hardhat node --hostname 127.0.0.1 --port 7545",
     "run-ganache": "ganache",
     "clean": "bun hardhat clean && rm -rf build/ && rm -rf coverage/ && rm -rf cache/ && rm -rf artifacts/ && rm -rf ignition/deployments/*",
     "build-ganache": "bun clean && bun compile && bun test &&  bun deploy-ganache",
-    "build-hardhat": "bun clean && bun compile && bun test &&  bun deploy-ganache"  
+    "build-hardhat": "bun clean && bun compile && bun test &&  bun deploy-hardhat",
+    "console": "bun hardhat console"
   },
   "dependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",

@@ -8,7 +8,7 @@ It has three main folders:
 - frontend/thirdweb-app: web app with nextjs and thirdweb component (react)
 - frontent/web3-app: web app with vanilla js
 
-# Smart Contracts Requirements
+## Smart Contracts Requirements
 
 - node v20.14.0
 - npm 10.8.1
@@ -38,17 +38,32 @@ bun install --save-dev @nomiclabs/hardhat-ethers ethers
 installed @nomiclabs/hardhat-ethers@2.2.3
 installed ethers@6.13.1
 
-# Frontend requirements
 
 
+## smart contracts management
 
-# contract management
 
-- bun hardhat contracts-compile
-- bun hardhat contracts-test
-- bun hardhat contracts-deploy-hardhat requires bun hardhat blockchain-run
-- bun hardhat contracts-deploy-ganache deploys to localhost:8545 , ganache should be running
+Basic compile, test, local hardhat blockchain and console scripts:
 
-# frontend management
+- `bun hardhat compile`
+- `bun hardhat test`
+- `bun hardhat deploy-hardhat` requires `bun run-hardhat` on another terminal, port is 7545
+- `bun hardhat deploy-ganache` deploys to  port 8545 , ganache should be running
+- `bun console` starts the hardhat console
+
+Build & deployment scripts (recommended):
+
+- `bun deploy-ganache` compile, test and deploy to local ganache on port 8545
+- `bun deploy-hardhat` compile, test and deploy to local hardhat node on port 7545
+
+Running bun console, smart contracts can be used like this:
+
+    `const ManuToken = await ethers.getContractAt("ManuToken", "deployed_contract_address");
+    await ManuToken.totalSupply();`
+
+
+## nextjs frontend management
+
+
 
 
