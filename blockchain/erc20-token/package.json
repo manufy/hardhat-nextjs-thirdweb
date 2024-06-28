@@ -1,3 +1,17 @@
 {
-  "name": "hardhat-project"
+  "scripts": {
+    "contracts-compile": "bun hardhat compile",
+    "contracts-test": "REPORT_GAS=true bun hardhat test",
+    "contracts-deploy-hardhat": "hardhat ignition deploy ./ignition/modules/Lock.ts",
+    "contracts-deploy-ganache": "hardhat ignition deploy ./ignition/modules/Lock.ts --network ganache",
+    "blockchain-run": "bun hardhat node"
+  },
+  "dependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.0.2",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.2"
+  }
 }
