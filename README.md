@@ -64,6 +64,26 @@ Running bun console, smart contracts can be used like this:
 
 ## nextjs frontend management
 
+npx create-next-app@latest
 
 
+bun i thirdweb
+ thirdweb@5.30.0 
 
+ # Third party
+
+react
+nextjs 
+plaid -> bank integration
+appwrite -> backend
+tailwind -> css
+chart.js -> charting
+shadcn -> components bun add shadcn-ui@0.8.0 init shadcn-ui@0.8.0
+sentry -> monitoring
+
+# starting frontend from scratch
+
+
+bun create next-app@latest  ./ --typescript --tailwind --eslint (no scr, app router, no import alias)
+bun add shadcn-ui@latest init 
+bun shadcn-ui init (defaut, slate, css variables yes)
