@@ -84,6 +84,6 @@ sentry -> monitoring
 # starting frontend from scratch
 
 
-bun create next-app@latest  ./ --typescript --tailwind --eslint (no scr, app router, no import alias)
-bun add shadcn-ui@latest  
-bun shadcn-ui init (defaut, slate, css variables yes)
+- ``bun create next-app@latest  ./ --typescript --tailwind --eslint` (no scr, app router, no import alias)
+- `bun add shadcn-ui@latest`  
+- `bun shadcn-ui init` (defaut, slate, css variables yes)
